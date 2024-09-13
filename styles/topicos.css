@@ -28,3 +28,29 @@
     font-size: 0.88em;
     font-weight: 700;
 }
+
+@media screen and (min-width: 1024px) {
+    .topicos__titulo {
+        font-size: 1.5em;
+    }
+
+    .topicos__link {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos {
+        padding: 3em 29vw;
+    }
+    
+    .topicos__link {
+        transition: all 1s;
+    }
+
+    .topicos__link:hover {
+        
+        background-color: var(--hover-laranja);
+    }
+
+}

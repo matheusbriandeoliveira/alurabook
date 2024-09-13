@@ -7,6 +7,14 @@
     display: inline-block;
 }
 
+.container__btn:checked~.container__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url(/img/MenuAberto.svg);
+}
+
+.container__btn:checked~.container__rotulo {
+    background: var(--degrade-azul);
+}
+
 .cabecalho {
     background-color: var(--branco);
     display: flex;
@@ -58,4 +66,118 @@
 
 .container__btn {
     display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes__item {
+    display: none;
+}
+
+.opcoes__btn {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--font-secundario);
+        font-size: 1.88em;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+        display: block;
+
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes__btn:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__btn {
+        display: none;
+    }
+
+    .opcoes__btn:checked~.opcoes__rotulo>.opcoes__item {
+        background: var(--degrade-azul);
+        color: var(--branco);
+    }
+
+    .opcoes__item {
+        padding: 2em 1em;
+        cursor: pointer;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--degrade-azul);
+    }
+
+    .lista-menu__item:hover >.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1728px) {
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
 }
